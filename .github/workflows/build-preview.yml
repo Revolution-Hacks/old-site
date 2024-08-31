@@ -30,7 +30,7 @@ jobs:
 
       - name: Parse vercel domain
         id: domain-parse
-        run: echo ${{ join(steps.deploy.outputs.*, '/n') }} | grep -m 1 -o '[^.]\+\.vercel\.app' >> $GITHUB_OUTPUT
+        run: GITHUB_OUTPUT=$(echo ${{join(steps.deploy.outputs.*, '\n')}} >> grep -m 1 -o '[^.]\+\.vercel\.app')
       - name: Assign Branch preview domain
         run: |
             ALIAS="${{github.ref_name}}.dev.revohacks.com
