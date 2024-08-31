@@ -34,7 +34,7 @@ jobs:
       - name: Assign Branch preview domain
         run: |
             ALIAS="${{github.ref_name}}.dev.revohacks.com
-            NEW_DEPLOYMENT_URL=$(echo ${{ join(steps.domain-parse.outputs.*, '\n') }})
+            NEW_DEPLOYMENT_URL="${{ join(steps.domain-parse.outputs.*, '\n') }}"
 
             # Check if the alias exists
             echo "Checking if the alias '$ALIAS' exists..."
