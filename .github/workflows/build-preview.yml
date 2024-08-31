@@ -19,16 +19,35 @@ jobs:
         run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
       - name: Build Project Artifacts
         run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
-      - name: Deploy Project Artifacts to Vercel
-        id: deploy
+      - name: Deploy to Vercel
         run: |
-          {
-            echo 'VERCEL_DEPLOY<<EOF'
-            vercelDeployURL=$(vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }})
-            echo EOF
-          } >> $GITHUB_OUTPUT
+          echo 'VERCEL_DEPLOY<<EOF'
+          vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+          echo EOF
+          >> $GITHUB_OUTPUT
+
       - name: Parse vercel domain
         id: domain-parse
-        run: GITHUB_OUTPUT=$(echo ${{join(steps.deploy.outputs.*, '\n')}} >> grep -m 1 -o '[^.]\+\.vercel\.app')
+        run: echo ${{ steps.deploy.outputs.VERCEL_DEPLOY }} | grep -m 1 -o '[^.]\+\.vercel\.app' >> $GITHUB_OUTPUT
       - name: Assign Branch preview domain
-        run: vercel alias ${{join(steps.domain-parse.outputs.*, '\n')}} ${{github.ref_name}} --token=${{ secrets.VERCEL_TOKEN }}
+        run: |
+            ALIAS="${{github.ref_name}}.dev.revohacks.com
+            NEW_DEPLOYMENT_URL=$(echo ${{ steps.domain-parse.outputs.VERCEL_DEPLOY }})
+
+            # Check if the alias exists
+            echo "Checking if the alias '$ALIAS' exists..."
+            EXISTING_ALIAS=$(vercel alias ls --json | jq -r --arg ALIAS "$ALIAS" '.aliases[] | select(.alias == $ALIAS) | .alias')
+
+            if [ "$EXISTING_ALIAS" == "$ALIAS" ]; then
+              echo "Alias '$ALIAS' exists. Deleting it..."
+              vercel alias rm "$ALIAS" -y --token=${{ secrets.VERCEL_TOKEN }}
+              if [ $? -eq 0 ]; then
+                echo "Alias '$ALIAS' deleted successfully."
+              else
+                echo "Failed to delete alias '$ALIAS'."
+                exit 1
+              fi
+            else
+              echo "Alias '$ALIAS' does not exist. No need to delete."
+            fi
+            vercel alias set "$NEW_DEPLOYMENT_URL" "$ALIAS" --token=${{ secrets.VERCEL_TOKEN }}
