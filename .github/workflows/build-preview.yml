@@ -52,4 +52,4 @@ jobs:
             else
               echo "Alias '$ALIAS' does not exist. No need to delete."
             fi
-            vercel alias set "$NEW_DEPLOYMENT_URL" "$ALIAS" --token=${{ secrets.VERCEL_TOKEN }}
+            vercel alias set $NEW_DEPLOYMENT_URL $ALIAS --token=${{ secrets.VERCEL_TOKEN }}
