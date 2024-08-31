@@ -22,10 +22,11 @@ jobs:
       - name: Deploy to Vercel
         id: deploy
         run: |
-          echo 'VERCEL_DEPLOY<<EOF'
-          vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
-          echo EOF
-          >> $GITHUB_OUTPUT
+          {
+            echo 'VERCEL_DEPLOY<<EOF'
+            vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
+            echo EOF
+          } >> $GITHUB_OUTPUT
 
       - name: Parse vercel domain
         id: domain-parse
@@ -33,7 +34,7 @@ jobs:
       - name: Assign Branch preview domain
         run: |
             ALIAS="${{github.ref_name}}.dev.revohacks.com
-            NEW_DEPLOYMENT_URL=$(echo ${{ steps.domain-parse.outputs.VERCEL_DEPLOY }})
+            NEW_DEPLOYMENT_URL=$(echo ${{ join(steps.domain-parse.outputs.*, '\n') }})
 
             # Check if the alias exists
             echo "Checking if the alias '$ALIAS' exists..."
