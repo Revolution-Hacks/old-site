@@ -23,7 +23,7 @@ jobs:
         id: deploy
         run: |
           vercelDeployURL=$(vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }} | grep -m 1 -o '\b\w*vercel\.app\w*\b')
-          result_code = ${PIPESTATUS[0]}
+          result_code=${PIPESTATUS[0]}
           echo $vercelDeployURL >> $GITHUB_OUTPUT
           exit $result_code
 
