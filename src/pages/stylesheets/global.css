@@ -139,3 +139,50 @@ footer {
   background-color: rgba(255, 255, 255, 0.08);
   color: #fff8dc;
 }
+
+@media (max-width: 1000px) {
+  .three-wide-card-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .card {
+    height: auto;
+    width: 90vw;
+  }
+
+  .hero-title {
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 1em;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .intro-paragraph-text {
+    height: auto;
+  }
+
+  .intro-paragraph {
+    width: 100vw;
+  }
+
+  .spacer-large {
+    height: 10vh;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .navbar-links {
+    margin: auto;
+  }
+
+  footer {
+    margin-top: 15vh;
+  }
+}
