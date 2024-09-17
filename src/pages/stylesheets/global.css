@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  background-color: #a08565;
+}
+
+/* Navbar styling */
+
+.navbar {
+  height: 8vh;
+  position: absolute;
+  width: 100%;
+}
+
+.navbar-alternative {
+  height: 8vh;
+  position: absolute;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.navbar-content {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar-link {
+  margin-left: 1em;
+  margin-right: 1em;
+
+  color: white;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.navbar-link:hover {
+  text-decoration: none;
+}
+
+.logo {
+  display: block;
+  max-height: 100%;
+}
+
+/* Font styling */
+
+.hero-title {
+  font-size: 10em;
+  font-family: "Holtwood One SC", serif;
+  color: #ffff8f;
+}
+
+.hero-subtitle {
+  font-size: 3em;
+  color: #fff8dc;
+  font-family: "Poppins", system-ui;
+  font-weight: 400;
+}
+
+.intro-paragraph-text {
+  font-size: 1.2em;
+  font-family: "Lora", serif;
+  color: #fff8dc;
+}
+
+/* Content section styling */
+
+.hero-intro {
+  padding: 2em;
+}
+
+.intro-paragraph {
+  padding: 2em;
+  height: 30vh;
+  width: 45vw;
+}
+
+.spacer {
+  height: 10vh;
+}
+
+.spacer-large {
+  height: 20vh;
+}
+
+.three-wide-card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 120vh;
+}
+
+.card {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.08);
+  margin: 1.5em;
+  border-radius: 30px;
+  padding: 1em;
+  height: 50vh;
+}
+
+.card h2 {
+  font-size: 1.5em;
+  color: #fff8dc;
+  font-family: "Poppins", system-ui;
+  font-weight: 400;
+}
+
+.card p {
+  font-size: 1.2em;
+  font-family: "Lora", serif;
+  color: #fff8dc;
+}
+
+.card a {
+  font-size: 1em;
+  font-family: "Lora", serif;
+  color: #e6c649;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: 55vh;
+  text-align: center;
+  padding: 1em;
+  padding-bottom: 2em;
+
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #fff8dc;
+}

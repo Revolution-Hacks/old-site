@@ -1,38 +1,149 @@
 ---
-
+import "./stylesheets/global.css";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Revolution | Revohacks</title>
-	</head>
-	<body class='bg-tan'>
-		<div class='flex items-center justify-center flex-col'>
-			<h1 class="text-5xl text-center font-bold">Revolution</h1>
-			<h3 class='text-xl'><em>a UK hackathon running summer 2025</em></h3>
-		</div>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Revolution | Revohacks</title>
 
-		<div class="bg-light-brown rounded-md m-4 flex items-center justify-center flex-col p-4">
-			<h2 class="text-3xl font-bold">What is Revolution?</h2>
-			<p class="text-lg">Revolution is a hackathon that will be hosted in England in Summer of 2025. It will be a 48-hour Industrial Revolution themed event over 3 days where teenagers can build projects and learn new skills.</p>
-			<h2 class="text-3xl font-bold">Where will Revolution be?</h2>
-				<p class="text-lg">We're hoping to host Revolution at the 1830 Warehouse at the Museum of Science and Industry located in Manchester. We think that would be a cool venue because the world’s first inter city railway opened here in 1830 and was used for over 140 years making it a really interesting historical site and relating to the Industrial Revolution and steampunk theme. </p>
-				<h2 class="text-3xl font-bold">I wanna come!</h2>
-				<p class="text-lg">Awesome, please fill out <a class="underline" href='https://greatbritishhackoff.fillout.com/interest' target='_blank'>this form!</a></p>
-				<h2 class="text-3xl font-bold">I wanna help!</h2>
-				<p class="text-lg">Great! If you're a teen and want to help organise, please join the #revolution-bts channel on the <a class="underline" href='https://hackclub.com/slack' target='_blank'>Hack Club Slack</a>. If you want to sponsor us, please reach out to <a class="underline" href='mailto:sponsorships@revohacks.com' target='_blank'>sponsorships@revohacks.com</a> or <a class="underline" href='team@revohacks.com' target="_blank">team@revohacks.com</a> for anything else.<br/>Alternatively you could contribute to this site on <a href='https://github.com/Revolution-Hacks/site' target='_blank'>GitHub</a>.</p>
-				<h2 class="text-3xl font-bold">What are you doing with my data?</h2>
-				<p class="text-lg">We do not have a privacy policy yet (it's in the works!) but we're only using your data to contact you about Revolution and to help us gauge interst based on location and the necessary costs of potential travel grants. If you have specific questions, please contact us. We won't share your data with anyone else outside of the organising team. If you want us to delete your data, email <a class="underline" href='mailto:team@revohacks.com' target='_blank'>team@revohacks.com</a>.</p>
-				<h2 class="text-3xl font-bold">I wanna donate!</h2>
-				<p class="text-lg">Thank you so much! If you'd like to make a donation you can fill out the below donation form</p>
-				<iframe src="https://hcb.hackclub.com/donations/start/revolution" style="border:none;" name="donateFrame" scrolling="yes" frameborder="0" marginheight="0px" marginwidth="0px" height="512px" width="512px" allowfullscreen></iframe>
-			</div>
-			<span class="text-center bg-elevated-tan rounded-md flex items-center m-4 italic">Revolution is fiscally sponsored by The Hack Foundation (d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499).</span>
+    <!--Font imports -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap");
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+    </style>
+  </head>
 
+  <body class="">
+    <!--Top navigation bar -->
+    <div class="navbar">
+      <div class="navbar-content">
+        <div></div>
+        <ul class="navbar-links">
+          <li><a href="" class="navbar-link">Home</a></li>
+          <li><a href="" class="navbar-link">Policy Documents</a></li>
+          <li><a href="" class="navbar-link">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
 
-	</body>
+    <!--Hero banner text-->
+
+    <div class="hero">
+      <div class="hero-intro">
+        <h1 class="hero-title">Revolution</h1>
+        <h2 class="hero-subtitle">A UK hackathon launching summer 2025</h2>
+      </div>
+    </div>
+
+    <!--Intro paragraph -->
+
+    <div class="intro-paragraph">
+      <p class="intro-paragraph-text">
+        In Summer 2025, we will host a 48 hour hackathon over the course of 3
+        days, where teens can build awesome projects, learn new skills, and make
+        lifelong friends along the way! Want to help us, or interested in
+        attending? Scroll down for more info!
+      </p>
+    </div>
+
+    <!--Q+A Cards -->
+
+    <div class="spacer-large"></div>
+
+    <div class="three-wide-card-grid">
+      <div class="card">
+        <h2>Where is Revolution?</h2>
+        <p>
+          We are currently at the stage of reaching out to various venues to see
+          if they can accomodate us and if they have availability. We are
+          interested in hosting Revoultion at MOSI, the home of the first
+          passenger railway station, opened in 1803
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>I'm interested in helping out, who do I contact?</h2>
+        <p>
+          If you are interested in helping out, from acting as event staff, to
+          helping us plan and deliver Revolution, we would love to hear from
+          you! You can drop us an email at hello@revohacks.com or send us a
+          message via #revolution-bts over at the Hack Club slack
+        </p>
+
+        <p>
+          We are looking for both 18+ and teen voulenteers to help us deliver
+          the event!
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>How can my company get in touch regarding sponsorship?</h2>
+        <p>
+          Looking to sponsor Revolution? Then we'd love to hear from you! We
+          have a variety of opportunities for sponsors, from sponsored
+          workshops, to your logo on our website, event swag, and more! Drop us
+          an email at sponsorship@revohacks.com and we'll get back to you!
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>I'm interested in attending, where do I sign up?</h2>
+        <p>
+          We love love to have you at Revolution! Please fill out <a
+            href="https://greatbritishhackoff.fillout.com/interest">this form</a
+          > and we can keep you updated with the latest news and updates regarding
+          Revolution. We promise not to spam your inbox!
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>How are you contributing to open source?</h2>
+        <p>
+          We recognise the benefits that open source can bring to the tech
+          community at large. This website is open-source, and so are our
+          planning documents! We will also encourage participants to open source
+          their projects made during Revolution where possible!
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>What are your commitments to safeguarding?</h2>
+        <p>
+          As an organisation who's primary audiance are under 18's, we have a
+          number of important considerations to make. We will ensure all over
+          18's in attendance are subject to stringent background checks, enforce
+          100% checks on the door, establish 24/7 emergency hotlines, and so
+          much more. You can find our full safeguarding policy <a
+            href="https://docs.google.com/document/d/1-8Fxaj8vCaA4omEX4tDg6oBuM2ERXzz9shoWMULXNfE/edit?usp=sharing"
+            >here</a
+          >.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>I'm looking to travel by rail or plane, what help can I get?</h2>
+        <p>
+          We are exploring the possibility to offer travel grants for
+          international participants travelling by rail and plane, or for UK
+          residents looking to travel by rail! This will allow us to ensure
+          there are no barriers to entry for Revolution! To apply, simply
+          indicate you would like assistance on our sign up form!
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      Revolution is fiscally sponsored by The Hack Foundation (d.b.a. Hack
+      Club), a 501(c)(3) nonprofit (EIN: 81-2908499).
+    </footer>
+  </body>
 </html>
