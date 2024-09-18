@@ -1,5 +1,11 @@
 ---
+// Import stylesheets
 import "./stylesheets/global.css";
+
+// Import images for future use
+import HackathonImage1 from "./images/hackathon1.jpg";
+import HackathonImage2 from "./images/hackathon2.jpg";
+import IDImage1 from "./images/AcceptedID.png";
 ---
 
 <html lang="en">
@@ -29,7 +35,7 @@ import "./stylesheets/global.css";
         <div></div>
         <ul class="navbar-links">
           <li><a href="" class="navbar-link">Home</a></li>
-          <li><a href="" class="navbar-link">Policy Documents</a></li>
+          <li><a href="" class="navbar-link">Policys</a></li>
           <li><a href="" class="navbar-link">Contact Us</a></li>
         </ul>
       </div>
@@ -55,12 +61,48 @@ import "./stylesheets/global.css";
       </p>
     </div>
 
-    <!--Q+A Cards -->
-
     <div class="spacer-large"></div>
 
-    <div class="three-wide-card-grid">
+    <!--Detailed info section -->
+
+    <div class="two-wide-card-grid">
       <div class="card">
+        <h2>What is a hackathon?</h2>
+        <p>
+          A hackathon is a social coding event where people can get together to
+          make awesome projects, learn new skills, and make friends along the
+          way. Everyone gets to showcase their creations with each other, with
+          prizes for the best submissions!
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="image-wrapper">
+          <img src={HackathonImage1.src} />
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="image-wrapper">
+          <img src={HackathonImage2.src} />
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Who can come?</h2>
+        <p>
+          As a high school hackathon, anyone aged 14-18 can attend, no matter
+          your skill level and knowledge, we'd love to have you! We are also
+          looking for voulenteers of all ages to help us deliver the event! No
+          matter how you choose to attend, we will ensure you have a great time!
+        </p>
+      </div>
+    </div>
+
+    <!--Cards -->
+
+    <div class="three-wide-card-grid">
+      <div class="card card1">
         <h2>Where is Revolution?</h2>
         <p>
           We are currently at the stage of reaching out to various venues to see
@@ -70,7 +112,7 @@ import "./stylesheets/global.css";
         </p>
       </div>
 
-      <div class="card">
+      <div class="card card2">
         <h2>I'm interested in helping out, who do I contact?</h2>
         <p>
           If you are interested in helping out, from acting as event staff, to
@@ -85,7 +127,7 @@ import "./stylesheets/global.css";
         </p>
       </div>
 
-      <div class="card">
+      <div class="card card3">
         <h2>How can my company get in touch regarding sponsorship?</h2>
         <p>
           Looking to sponsor Revolution? Then we'd love to hear from you! We
@@ -95,7 +137,7 @@ import "./stylesheets/global.css";
         </p>
       </div>
 
-      <div class="card">
+      <div class="card card4">
         <h2>I'm interested in attending, where do I sign up?</h2>
         <p>
           We love love to have you at Revolution! Please fill out <a
@@ -105,7 +147,7 @@ import "./stylesheets/global.css";
         </p>
       </div>
 
-      <div class="card">
+      <div class="card card5">
         <h2>How are you contributing to open source?</h2>
         <p>
           We recognise the benefits that open source can bring to the tech
@@ -115,7 +157,7 @@ import "./stylesheets/global.css";
         </p>
       </div>
 
-      <div class="card">
+      <div class="card card6">
         <h2>What are your commitments to safeguarding?</h2>
         <p>
           As an organisation who's primary audiance are under 18's, we have a
@@ -125,18 +167,59 @@ import "./stylesheets/global.css";
           much more. You can find our full safeguarding policy <a
             href="https://docs.google.com/document/d/1-8Fxaj8vCaA4omEX4tDg6oBuM2ERXzz9shoWMULXNfE/edit?usp=sharing"
             >here</a
-          >.
+          >. Just so you know, we require either a Government Issued ID (such as
+          a Passport or Driver's Licence), or another photographic ID bearing
+          the PASS hallmark, as this forms part of our Photo ID policy.
+          Photocopies of valid IDs will not be accepted, and nor will digital
+          photos of IDs. For digital IDs, the only two forms we will recognise
+          are the YOTI app and the MyRAFAC app.
         </p>
       </div>
 
-      <div class="card">
-        <h2>I'm looking to travel by rail or plane, what help can I get?</h2>
+      <div class="card card7">
+        <!--<h2>I'm looking to travel by rail or plane, what help can I get?</h2>
         <p>
           We are exploring the possibility to offer travel grants for
           international participants travelling by rail and plane, or for UK
           residents looking to travel by rail! This will allow us to ensure
           there are no barriers to entry for Revolution! To apply, simply
           indicate you would like assistance on our sign up form!
+        </p> -->
+        <div class="image-wrapper">
+          <img src={IDImage1.src} />
+        </div>
+      </div>
+
+      <div class="card card8">
+        <h2>I'm a parent and I have some questions!</h2>
+        <p>
+          We welcome all questions you may have, and endevour to answer them as
+          quickly as possible! Please just reach out via hello@revohacks.com. We
+          can answer any questions you may have, or offer 1-to-1 zoom meetings
+          to discuss further if you would prefer!
+        </p>
+      </div>
+
+      <div class="card card9">
+        <h2>I have alergies / dietary requirements, how can you help me?</h2>
+        <p>
+          On the registration form sent to you, there will be a section to fill
+          out any alergies or dietary requirements you may have! We will take
+          that info and pass it on to our caterers to ensure everyone can enjoy
+          a wide selection of food options!
+        </p>
+      </div>
+
+      <div class="card card10">
+        <h2>How will my data be handled?</h2>
+        <p>
+          In accordance with the UK Data Protection Act, we commit to the safe
+          and secure handling of your data with regards to the data protection
+          principles. All data is encrypted at rest and in transit, we only
+          collect the data nessecary for the planning and execution of our
+          event, and we ensure only the nessecary, trusted people have accsess
+          to your data for the purposes set out in our data protection policy,
+          which can be found <a href="">here</a>.
         </p>
       </div>
     </div>
