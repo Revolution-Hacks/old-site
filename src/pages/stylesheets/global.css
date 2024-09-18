@@ -72,6 +72,22 @@ li {
   color: #fff8dc;
 }
 
+.intro-paragraph a {
+  display: block;
+  width: fit-content;
+  padding: 0.8em;
+  border: 2px solid white;
+  font-size: 1.2em;
+  font-family: "Lora", serif;
+  color: #fff8dc;
+  margin-top: 3em;
+}
+
+.intro-paragraph a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
+}
+
 /* Content section styling */
 
 .hero-intro {
@@ -95,7 +111,7 @@ li {
 .three-wide-card-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  min-height: 120vh;
+  height: fit-content;
 }
 
 .card {
