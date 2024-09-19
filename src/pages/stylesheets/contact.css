@@ -1,0 +1,55 @@
+.contact-header {
+  height: 15vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.contact-card {
+  display: block;
+  padding: 1em;
+}
+
+.contact-card h1 {
+  font-size: 2em;
+  color: #fff8dc;
+  font-family: "Poppins", system-ui;
+  font-weight: 500;
+}
+
+.contact-card h2 {
+  font-size: 1.5em;
+  color: #fff8dc;
+  font-family: "Poppins", system-ui;
+  font-weight: 400;
+}
+
+.contact-card p {
+  font-size: 1.2em;
+  font-family: "Lora", serif;
+  color: #fff8dc;
+}
+
+.contact-card a {
+  font-size: 1em;
+  font-family: "Lora", serif;
+  color: #e6c649;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+.centre-text {
+  text-align: center;
+  margin: auto;
+}
+
+.background {
+  background-color: rgba(255, 255, 255, 0.08);
+  height: fit-content;
+
+  margin: auto;
+
+  border-radius: 50px;
+  padding: 1em;
+}

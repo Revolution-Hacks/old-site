@@ -1,0 +1,61 @@
+---
+// Import stylesheets
+import "./stylesheets/global.css";
+import "./stylesheets/contact.css";
+
+// Import images for future use
+import HackathonImage1 from "./images/hackathon1.jpg";
+import HackathonImage2 from "./images/hackathon2.jpg";
+import IDImage1 from "./images/AcceptedID.png";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/public/revohacks_logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Revolution | Revohacks</title>
+
+    <!--Font imports -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap");
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+    </style>
+  </head>
+
+  <body class="">
+    <!--Top navigation bar -->
+    <div class="navbar">
+      <div class="navbar-content">
+        <div></div>
+        <ul class="navbar-links">
+          <li><a href="" class="navbar-link">Home</a></li>
+          <li><a href="" class="navbar-link">Policys</a></li>
+          <li><a href="" class="navbar-link">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="contact-header">
+      <div class="contact-card centre-text">
+        <h1 class="background">Contact us</h1>
+      </div>
+      <div class="contact-card centre-text">
+        <p class="background">
+          Want to get in touch with us? Then you are in the right place
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      Revolution is fiscally sponsored by The Hack Foundation (d.b.a. Hack
+      Club), a 501(c)(3) nonprofit (EIN: 81-2908499).
+    </footer>
+  </body>
+</html>
